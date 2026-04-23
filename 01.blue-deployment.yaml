@@ -14,7 +14,7 @@ spec:
   selector:
     matchLabels:
    #using this matching labels rs select pods to create/run
-     project: roboshop
+    project: roboshop
     component: frontend
     tier: frontend
     version: blue
@@ -24,10 +24,10 @@ spec:
    metadata:
     name: 
     labels:
-       project: roboshop
-       component: frontend
-       tier: frontend
-       version: blue
+      project: roboshop
+      component: frontend
+      tier: frontend
+      version: blue
    spec:
     containers:
      - name: nginx-blue
