@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-green
+  
+  #these are labels for replica set
+  labels:
+   project: roboshop
+   component: frontend
+   tier: frontend
+   version: green
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+   #using this matching labels rs select pods to create/run
+     project: roboshop
+     component: frontend
+     tier: frontend
+     version: green
+
+  # This is pod definition, pod is subset of replicaset
+  template:
+   metadata:
+    name: 
+    labels:
+      project: roboshop
+      component: frontend
+      tier: frontend
+      version: green
+   spec:
+    containers:
+     - name: nginx-green
+       image: sam123yuktha/ngix-green:2.0.0
