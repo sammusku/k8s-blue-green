@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-blue
-  namespace: roboshop
+  
   #these are labels for replica set
   labels:
    project: roboshop
