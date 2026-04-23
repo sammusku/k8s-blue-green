@@ -14,10 +14,10 @@ spec:
   selector:
     matchLabels:
    #using this matching labels rs select pods to create/run
-    project: roboshop
-    component: frontend
-    tier: frontend
-    version: blue
+     project: roboshop
+     component: frontend
+     tier: frontend
+     version: blue
 
   # This is pod definition, pod is subset of replicaset
   template:
